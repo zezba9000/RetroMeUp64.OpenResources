@@ -1,4 +1,4 @@
-# Resources to help make your own custom game carts for N64
+# Resources to help make your own custom N64 game carts
 Custom art for games or game mods and their respective resources.<br>
 Other N64 tools, firmware backup and printer / label cutter Krita source files included in this repo.
 
