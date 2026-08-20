@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://kbeckmann.github.io/PicoCart64/ -->
+<html translate="no"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>PicoCart64 UF2 ROM Builder</title>
+    
+    <meta name="description" content="Tool that compiles ROM files into UF2 files for PicoCart64.">
+    <meta name="keywords" content="picocart64,picocart,rom,z64,uf2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="manifest" href="https://kbeckmann.github.io/PicoCart64/manifest.json">
+    <link rel="shortcut icon" href="https://kbeckmann.github.io/PicoCart64/style/app_icon_16.png" type="image/png" sizes="16x16">
+    <link rel="shortcut icon" href="https://kbeckmann.github.io/PicoCart64/style/app_icon_192.png" type="image/png" sizes="192x192">
+
+    <!-- iOS icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="https://kbeckmann.github.io/PicoCart64/style/app_icon_114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://kbeckmann.github.io/PicoCart64/style/app_icon_114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://kbeckmann.github.io/PicoCart64/style/app_icon_144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://kbeckmann.github.io/PicoCart64/style/app_icon_144.png">
+    <link rel="apple-touch-icon" href="https://kbeckmann.github.io/PicoCart64/style/app_icon_192.png">
+
+    <!-- cache -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- social network metatags -->
+    <meta name="twitter:site" content="@kbeckmann">
+    <meta name="twitter:creator" content="@kbeckmann">
+    <meta name="twitter:domain" content="picoc.art">
+    <meta property="og:title" content="PicoCart64 UF2 ROM Builder">
+    <meta name="twitter:title" content="PicoCart64 UF2 ROM Builder">
+    <meta name="twitter:description" content="Tool that compiles ROM files into UF2 files for PicoCart64.">
+    <meta property="og:image" content="https://picoc.art/PicoCart64/style/thumbnail.jpg">
+    <meta name="twitter:image" content="https://picoc.art/PicoCart64/style/thumbnail.jpg">
+    <meta name="twitter:card" content="photo">
+
+    <link type="text/css" rel="stylesheet" href="./PicoCart64 UF2 ROM Builder_files/PicoCart64.css" media="all">
+    <script type="text/javascript" src="./PicoCart64 UF2 ROM Builder_files/PicoCart64.js.download"></script>
+    <script type="text/javascript" src="./PicoCart64 UF2 ROM Builder_files/MarcFile.js.download"></script>
+    <script type="text/javascript" src="./PicoCart64 UF2 ROM Builder_files/crc.js.download"></script>
+    <script type="text/javascript" src="./PicoCart64 UF2 ROM Builder_files/uf2.js.download"></script>
+</head>
+
+<body>
+    <div id="column">
+        <!-- HEADER -->
+        <header>
+            <!-- <img src="./style/logo.png" /> -->
+            <h1>PicoCart64 UF2 ROM Builder</h1>
+        </header>
+
+        <!-- APP -->
+        <div id="wrapper">
+            <div id="tab0" class="tab">
+                <div class="row m-b">
+                    <div class="leftcol text-right"><label for="input-file-rom" data-localize="rom_file">ROM
+                            file:</label></div>
+                    <div class="rightcol">
+                        <input type="file" id="input-file-rom" class="enabled">
+                    </div>
+                </div>
+
+                <div class="row m-b" id="rom-info">
+                    <div class="leftcol text-right">CRC32:</div>
+                    <div class="rightcol"><span id="crc32"></span></div>
+                    <div class="leftcol text-right">MD5:</div>
+                    <div class="rightcol"><span id="md5"></span></div>
+                    <div class="leftcol text-right">SHA-1:</div>
+                    <div class="rightcol"><span id="sha1"></span></div>
+                    <div class="leftcol text-right"><span id="infotext-left">&nbsp;</span></div>
+                    <div class="rightcol"><span id="infotext-right">&nbsp;</span></div>
+                </div>
+
+                <div class="row m-b" id="row-compress">
+                    <div class="leftcol text-right"></div>
+                    <div class="rightcol">
+                        <input type="checkbox" id="checkbox-compress" checked=""> <label for="checkbox-compress" data-localize="compress">Compress</label>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <span id="message-build" class="message"></span>
+                    <button id="button-build" data-localize="build_uf2" class="disabled" disabled="">Build UF2</button>
+                </div>
+
+                <div>
+                    <h2>Instructions for PicoCart64 v1 lite:</h2>
+                    <ol>
+                        <li>
+                            Download the latest firmware build for PicoCart64 v1 lite.<br>
+                            You can find the last releases over at <a href="https://github.com/kbeckmann/PicoCart64/releases">GitHub Releases</a>.<br>
+                            A stable release can be found <a href="https://github.com/kbeckmann/PicoCart64/releases/download/releases%2F20240330/picocart64.zip">here</a>, however newer versions might be available through the link above.
+                        </li>
+                        <li>
+                            Unzip the downloaded file.
+                        </li>
+                        <li>
+                            Program your Raspberry Pi Pico with either picocart64-v1-ntsc.uf2 or picocart64-v1-pal.uf2 depending on your N64.
+                            Consult the official documentation for how to program uf2 files.
+                        </li>
+                        <li>
+                            On this page, press "Choose file", and select the N64 ROM you want to prepare. Note that is has to be in z64 format.
+                        </li>
+                        <li>
+                            Keep "Compress" checked unless you have a reason for using an uncompressed ROM.
+                        </li>
+                        <li>
+                            Press "Build UF2" and wait for a while until the process is done.
+                        </li>
+                        <li>
+                            Program the UF2 file which should be in your Download folder by now.
+                        </li>
+                        <li>
+                            Ensure to power-cycle the Raspberry Pi Pico before starting the N64.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            PicoCart64 UF2 ROM Builder <small>v1.0.0</small> by <a href="https://kbeckmann.github.io/">Konrad Beckmann</a>, based on <a href="https://github.com/marcrobledo/RomPatcher.js/">RomPatcher.js</a>.
+            <br>
+            <img src="./PicoCart64 UF2 ROM Builder_files/icon_github.svg" class="icon github"> <a href="https://github.com/kbeckmann/PicoCart64/" target="_blank">See on GitHub</a>
+        </footer>
+    </div>
+
+
+</body></html>

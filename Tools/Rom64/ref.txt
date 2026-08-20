@@ -1,0 +1,2 @@
+--- Convert to native .z64 format ---
+.\rom64-windows-amd64.exe convert <your-rom.z64>
