@@ -7,10 +7,15 @@ Other N64 tools, firmware backup and printer / label cutter Krita source files i
 * git clone https://github.com/zezba9000/RetroMeUp64.OpenResources.git
 * Or you can just download a zip if you have a GitHub account
 
-### N64 Cart physical Label dimensions
+### Cart Label dimensions
 * Front = 2.15 x 2.47
 * Back = 3.09 x 1.5
 * Nintendo Logo = 1.121 x 0.275
+
+### Label printing
+* Printing: I recomend "Canon - PIXMA PRO-200S" or similar
+* Cutting: I recomend "Cricut Explore 5" or similar
+* Paper: "Glossy Sticker Paper, 8.5in x 11in"
 
 ### Other resources
 * For Consumer N64Cart-V3 Bootloader source & files: <a href="https://github.com/zezba9000/N64cart/releases">Link</a>
@@ -28,10 +33,12 @@ Use these with "FlashCarts Firmware\N64CartV3\Bootloader_Consumer\n64cart-manage
 More info: <a href="https://github.com/zezba9000/N64cart/releases">Link</a><br>
 Use this tool to manage N64CartV3 "FlashCarts Firmware\N64CartV3\ROMFS.Manager.win64.zip"<br>
 <img src="ReadMe/PicoCart.avif" width="256"/>
-<img src="ReadMe/N64CartV3.avif" width="256"/><br><br>
+<img src="ReadMe/N64CartV3.avif" width="256"/><br>
+To fit these in a shell with metal shield, simply clip and bend these parts.<br>
+Double check reset button is not pressed when inside shell.<br>
+<img src="ReadMe/Plate1.jpg" width="256"/><br>
+<img src="ReadMe/Plate2.jpg" width="256"/>
+<img src="ReadMe/Plate3.jpg" width="256"/><br>
+<img src="ReadMe/Plate4.jpg" width="256"/><br><br>
 Other option is to buy repo carts with identical N64 save types.<br>
-Then use a 
-
-### Labels
-* Printing: I recomend "Canon - PIXMA PRO-200S" or similar
-* Cutting: I recomend "Cricut Explore 5" or similar
+Then use a "Sanni Cart Reader v5" to flash them.
