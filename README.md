@@ -27,8 +27,8 @@ You have 2 options depending on size or save function needs<br>
 Use these with "FlashCarts Firmware\N64CartV3\Bootloader_Consumer\n64cart-manager.z64"<br>
 More info: <a href="https://github.com/zezba9000/N64cart/releases">Link</a><br>
 Use this tool to manage N64CartV3 "FlashCarts Firmware\N64CartV3\ROMFS.Manager.win64.zip"<br>
-<img src="ReadMe/PicoCart.avif" style="width:256"/>
-<img src="ReadMe/N64CartV3.avif" style="width:256"/><br><br>
+<img src="ReadMe/PicoCart.avif" width="256"/>
+<img src="ReadMe/N64CartV3.avif" width="256"/><br><br>
 Other option is to buy repo carts with identical N64 save types.<br>
 Then use a 
 
